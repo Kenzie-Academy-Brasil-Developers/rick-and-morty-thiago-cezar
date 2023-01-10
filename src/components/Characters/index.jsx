@@ -20,7 +20,7 @@ function Characters({ characterList, setPage }) {
     <Main>
       <ul>
         <li className="soon">
-          <img src={logo} alt="" className="img"/>
+          <img src={logo} alt="Logo Rick and Morty" className="img"/>
         </li>
         {characterList.map((elem) => (
           <CharCard key={elem.id} elem={elem} />
