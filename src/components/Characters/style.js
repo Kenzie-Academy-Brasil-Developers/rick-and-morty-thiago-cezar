@@ -1,59 +1,59 @@
 import styled from "styled-components";
 
-import Back from "../../img/Back.jpg"
+import Back from "../../img/background.png";
 
-export const Main = styled.main `
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@1&display=swap');
+export const Main = styled.main`
+  @keyframes loading {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  background-image: url(${Back});
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  justify-content: center;
+  height: 100vh;
+  background-attachment: fixed;
 
-background-image: url(${Back});
-display: flex;
-flex-direction: column;
-align-items: center;
-width: auto;
-justify-content: center;
-height: 100vh;
-background-attachment: fixed;
-
-> img{
-    margin-bottom: 2rem;
-    height: 8vh;
-}
-
-
- > div{
+  .soon {
     display: flex;
     width: 100%;
-    justify-content: space-around;
-
-    button{
-        margin: 1rem 0;
-        height: 2.5rem;
-        border: 2px solid rgb(192,223,64);
-        background-color: rgb(75,181,203);
-        border-radius:1rem;
-        font-size: 1.3rem;
-        font-family: Square;
-        font-weight: 700;
-        cursor: pointer;
-    }
-}
-
-> ul{
+  }
+  .img {
+    margin: 0 auto;
+    width: 40%;
+  }
+  > ul {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    width: 90%;
-    height: 80vh;
-}
+    width: 95%;
+    overflow-x: hidden;
+    ::-webkit-scrollbar-track {
+      background-color: rgb(192, 223, 64, 01);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(0, 0, 0);
+    }
+    animation: loading 2s;
+  }
 
-@media screen and (min-width:500px){
-    > img{
-    height: 6rem;
-}
-
-
-}
-`
+  @media screen and (max-width: 500px) {
+    .img {
+      width: 70%;
+    }
+  }
+`;

@@ -8,10 +8,10 @@ function CharCard({ elem }) {
       key={elem.id}
       color={
         elem.status === "Alive"
-          ? "green"
+          ? "#39ff14"
           : elem.status === "Dead"
-          ? "red"
-          : "blue"
+          ? "#FF0000"
+          : "#00fff6"
       }
     >
       <h3>
